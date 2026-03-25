@@ -1,8 +1,9 @@
-import { districts, contact } from "@/app/constants";
+import { districts, contact, brands } from "@/app/constants";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Phone, MessageCircle, MapPin, Star, Clock, ShieldCheck } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Star, Clock, ShieldCheck, Wrench } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!district) return { title: "Bölge Bulunamadı" };
 
   return {
-    title: `${district.name} Beyaz Eşya Servisi | Hızlı Onarım & Teknik Destek`,
+    title: `${district.name} Beyaz Eşya Servisi | 40 Yıllık Tecrübe`,
     description: `${district.details.substring(0, 160)}...`,
   };
 }
@@ -51,6 +52,20 @@ export default async function DistrictPage({ params }: Props) {
             {district.details}
           </p>
         </header>
+
+        <section className="mb-20">
+          <h2 className="text-2xl font-black text-white italic uppercase mb-8 tracking-tight text-center">{district.name}&apos;de Marka Servislerimiz</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {brands.map((brand, i) => (
+              <Link key={i} href={`/bolgeler/${district.slug}/${brand.slug}`} className="p-4 bg-white/5 border border-white/5 rounded-2xl hover:border-primary/30 transition-all flex flex-col items-center gap-3 group">
+                <div className="size-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                  <Wrench className="size-5 text-primary group-hover:text-white" />
+                </div>
+                <span className="text-white font-bold uppercase italic text-[10px] tracking-widest text-center">{brand.name} Servisi</span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {[

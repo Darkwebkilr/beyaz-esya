@@ -114,7 +114,7 @@ export default function Home() {
           <div className="text-left space-y-8 relative z-10">
             <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm">
               <div className="size-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-xs font-black tracking-[0.2em] uppercase text-slate-300 italic">Manisa&apos;nın 1 Numaralı Teknik Ekibi</span>
+              <span className="text-xs font-black tracking-[0.2em] uppercase text-slate-300 italic">Manisa&apos;nın 40 Yıllık Teknik Gücü</span>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85] text-white uppercase italic">
@@ -124,7 +124,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
-              Manisa genelinde 15 yılı aşkın tecrübemizle, tüm marka ve model beyaz eşyalarınızı yerinde, orijinal parça ve 1 yıl servis garantisi ile hayata döndürüyoruz. Aynı gün kapınızdayız.
+              Manisa genelinde 40 yılı aşkın tecrübemizle, tüm marka ve model beyaz eşyalarınızı yerinde, orijinal parça ve 1 yıl servis garantisi ile hayata döndürüyoruz. Aynı gün kapınızdayız.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -141,7 +141,7 @@ export default function Home() {
             {/* Quick Info Stats */}
             <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/5">
               {[
-                { label: "Deneyim", value: "15+ Yıl" },
+                { label: "Deneyim", value: "40+ Yıl" },
                 { label: "Müşteri", value: "10k+" },
                 { label: "Garanti", value: "1 Yıl" },
               ].map((stat, i) => (
@@ -168,7 +168,7 @@ export default function Home() {
                 priority
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               
               {/* Minimalist Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -226,7 +226,7 @@ export default function Home() {
                 </h2>
                 <div className="space-y-6 text-slate-400 text-lg leading-relaxed font-medium">
                    <p>
-                     15 yılı aşkın bir süre önce Manisa merkezinde küçük bir atölye olarak başladığımız bu yolculukta, bugün tüm ilçelere yayılan dev bir teknik servis ağına dönüştük. Amacımız sadece bozulan cihazları tamir etmek değil, Manisalı hemşerilerimizin günlük konforunu kesintisiz sürdürmelerini sağlamaktır.
+                     40 yılı aşkın bir süre önce Manisa merkezinde küçük bir atölye olarak başladığımız bu yolculukta, bugün tüm ilçelere yayılan dev bir teknik servis ağına dönüştük. Amacımız sadece bozulan cihazları tamir etmek değil, Manisalı hemşerilerimizin günlük konforunu kesintisiz sürdürmelerini sağlamaktır.
                    </p>
                    <p>
                      Yunusemre&apos;den Köprübaşı&apos;na kadar Manisa&apos;nın her karışını avucumuzun içi gibi biliyoruz. Arçelik, Beko, Bosch gibi dünya devlerinin teknolojilerini yakından takip ediyor, her yıl düzenli eğitim alan sertifikalı teknisyenlerimizle &quot;imkansız&quot; denilen arızaları bile yerinde çözüyoruz.
@@ -254,9 +254,9 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-overlay" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-overlay" />
                 <div className="absolute top-10 right-10 size-32 bg-white flex flex-col items-center justify-center rounded-full shadow-2xl rotate-12 transition-transform">
-                   <span className="text-4xl font-black text-black leading-none">15</span>
+                   <span className="text-4xl font-black text-black leading-none">40</span>
                    <span className="text-[10px] font-black text-black uppercase tracking-widest text-center">Yıllık<br/>Tecrübe</span>
                 </div>
              </div>
@@ -280,9 +280,9 @@ export default function Home() {
                   alt={service.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-700 opacity-60"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
               </div>
               <div className="p-8 relative flex-1 flex flex-col">
                 <div className="size-12 bg-primary rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
@@ -331,7 +331,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative min-h-[450px] lg:h-[600px] rounded-[40px] overflow-hidden border border-white/10 flex items-center justify-center bg-white/[0.02]">
-             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-0" />
+             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-overlay z-0" />
              <TestimonialSlider />
           </div>
         </div>

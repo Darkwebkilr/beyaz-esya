@@ -45,9 +45,9 @@ export default async function ServicePage({ params }: Props) {
             alt={service.name}
             fill
             sizes="(max-width: 1024px) 100vw, 896px"
-            className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
           <div className="absolute bottom-12 left-12 right-12">
             <h1 className="text-3xl md:text-7xl font-black text-white italic uppercase tracking-tight leading-none">
               {service.name}
@@ -66,7 +66,7 @@ export default async function ServicePage({ params }: Props) {
               <div className="mt-8 p-6 bg-white/5 border border-white/10 rounded-2xl">
                 <p className="text-slate-500 text-sm font-bold uppercase tracking-widest italic mb-4">Uzmanlık Alanımız Olan Markalar:</p>
                 <div className="flex flex-wrap gap-4">
-                  {["Arçelik", "Beko", "Bosch", "Samsung", "LG", "Siemens", "Profilo", "Vestel"].map((brand) => (
+                  {["Arçelik", "Beko", "Bosch", "Samsung", "Siemens", "Profilo", "Ariston"].map((brand) => (
                     <span key={brand} className="text-slate-400 text-xs font-black uppercase tracking-widest border-b border-white/5 pb-1">
                       {brand} {service.name}
                     </span>
