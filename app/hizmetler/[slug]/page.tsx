@@ -1,7 +1,7 @@
 import { services, contact } from "@/app/constants";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Phone, MessageCircle, Wrench, ShieldCheck, Clock, Star, MapPin } from "lucide-react";
+import { Phone, MessageCircle, Wrench, ShieldCheck, Clock, Star, MapPin, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
