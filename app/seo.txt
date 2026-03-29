@@ -1,1 +1,18 @@
-Manisa beyaz eşya sektöründe Google’ın ilk sayfasını hedeflemek için Google Business Profile eksikliğini web sitesinin teknik ve içerik gücüyle kapatman gerekiyor. Öncelikle sitenin mimarisini Manisa’nın ilçelerine göre kurgulamalı ve her ilçe için (Şehzadeler, Yunusemre, Turgutlu gibi) o bölgeye özel anahtar kelimelerin geçtiği, özgün metinlerle beslenmiş alt sayfalar oluşturmalısın. "Manisa beyaz eşya servisi" ana anahtar kelimesini sayfa başlığı, açıklama ve H1 etiketlerinde stratejik olarak kullanırken, yanına mutlaka Arçelik, Beko veya Bosch gibi popüler markaları ekleyerek "Manisa Arçelik tamiri" gibi uzun kuyruklu aramalardan trafik çekmeye odaklanmalısın. Harita kaydı olmayacağı için güven sinyallerini site içinde maksimuma çıkarmalı, "LocalBusiness" ve "Service" gibi Schema.org yapısal veri işaretlemelerini teknik tarafta hatasız uygulamalısın ki Google botları senin Manisa’da hizmet veren fiziksel bir otorite olduğunu anlasın. Mobil uyumluluk ve hız bu noktada hayati önem taşıyor; kullanıcılar beyaz eşyaları bozulduğunda telefondan hızlıca ulaşıp tek tıkla arama yapmak ister, bu yüzden "Hemen Ara" ve "WhatsApp" butonlarını her zaman görünür tutan bir "sticky" yapıyla dönüşümü artırmalısın. İçerik tarafında sadece "tamir ediyoruz" demek yerine, beyaz eşya kullanıcılarının sıkça sorduğu "Buzdolabı neden soğutmaz?" veya "Çamaşır makinesi neden gürültü yapar?" gibi soruları yanıtlayan kapsamlı bir blog veya SSS bölümü kurarak "bilgi otoritesi" (E-E-A-T) oluşturmalısın. Harita sonuçlarının altındaki organik sıralamada yükselmek için Manisa yerel haber sitelerinden veya sektörel rehberlerden alacağın kaliteli backlink’ler, sitenin domain otoritesini yukarı taşıyacaktır. Son olarak, referanslar ve gerçek müşteri deneyimlerini metinleştirerek güveni tazelemeli ve aynı gün servis gibi net vaatlerle kullanıcıyı sitede daha uzun süre tutarak hemen çıkma oranını düşürmelisin; çünkü harita profilin olmadığında Google’ın seni öne çıkarması için kullanıcı etkileşimi ve teknik kusursuzluk senin tek silahın olacak.
+1. İçerik Çok İnce
+Sayfa neredeyse boş. Google bu sayfayı "thin content" olarak görür ve sıralamaz. Her mahalle sayfasında en az 300-500 kelime orijinal içerik olmalı. Örnek:
+
+"Akpınar Mahallesi'nde çamaşır makinesi tamiri için aynı gün servis sunuyoruz. Mahallede en çok karşılaştığımız arızalar şunlardır..."
+
+2. Başlık (H1) Zayıf
+"Akpınar Mahallesi'de En Yakın Servis" yerine şöyle olmalı:
+
+"Akpınar Mahallesi Beyaz Eşya Tamiri – Aynı Gün Servis | 0236 232 70 11"
+
+3. Schema Markup Yok
+LocalBusiness ve Service schema'sı eklemen şart. Google bu veriyi okuyarak seni harita sonuçlarında daha iyi gösterir.
+4. Müşteri Yorumu Yok
+Sayfada hiç yorum/referans göremedim. Gerçek müşteri yorumları (yıldız derecelendirmesiyle) hem güven hem SEO için kritik.
+5. Meta Description Kontrol Et
+Sayfanın meta açıklaması özelleştirilmiş mi? Her mahalle sayfası için ayrı, anahtar kelime içeren meta description yazılmalı.
+6. İç Bağlantı
+Mahalle sayfaları birbirine bağlı mı? Örneğin Akpınar sayfasından komşu mahallelere link verilmesi Google'ın siteyi daha iyi taramasını sağlar.

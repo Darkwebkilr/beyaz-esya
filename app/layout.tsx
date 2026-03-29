@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Manisa Beyaz Eşya Servisi | Hızlı ve Güvenilir Teknik Servis",
-  description: "Manisa'da buzdolabı, çamaşır makinesi, bulaşık makinesi ve tüm beyaz eşyalarınız için aynı gün servis imkanı. Orijinal yedek parça ve garanti.",
+  description: "Manisa'da buzdolabı, çamaşır makinesi, bulaşık makinesi ve tüm beyaz eşyalarınız için aynı gün servis imkanı. Orijinal yedek parça desteği.",
   keywords: "manisa beyaz eşya servisi, buzdolabı tamiri manisa, çamaşır makinesi servisi manisa, bulaşık makinesi tamiri, teknik servis manisa, Yunusemre, Şehzadeler, Akhisar, Turgutlu, Salihli, Soma, Alaşehir, Saruhanlı, Kula, Kırkağaç, Demirci, Sarıgöl, Gördes, Selendi, Ahmetli, Gölmarmara, Köprübaşı",
   authors: [{ name: "Manisa Teknik Servis" }],
   robots: "index, follow",
@@ -35,7 +35,7 @@ export default function RootLayout({
       lang="tr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-[#0f172a] text-slate-200">
+      <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
         {children}
       </body>
     </html>

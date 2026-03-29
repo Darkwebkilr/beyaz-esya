@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "Melis K.",
     location: "Turgutlu",
-    comment: "Çamaşır makinesi kart arızası için birçok yer 'yapılamaz' dedi. Manisa Teknik Servis ekibi aynı gün gelip kartı tamir etti. Hem çok uygun fiyatlı hem de garantili hizmet verdiler.",
+    comment: "Çamaşır makinesi kart arızası için birçok yer 'yapılamaz' dedi. Manisa Teknik Servis ekibi aynı gün gelip kartı tamir etti. Hem çok uygun fiyatlı hem de profesyonel hizmet verdiler.",
     rating: 5
   },
   {
@@ -40,7 +40,7 @@ export default function TestimonialSlider() {
 
   return (
     <div className="relative w-full max-w-4xl mx-auto px-4 overflow-hidden">
-      <div className="absolute top-0 left-0 p-4 opacity-5">
+      <div className="absolute top-0 left-0 p-4 opacity-10">
         <Quote className="size-24 text-primary fill-primary" />
       </div>
 
@@ -60,7 +60,7 @@ export default function TestimonialSlider() {
               ))}
             </div>
             
-            <p className="text-xl md:text-2xl italic font-bold text-white leading-relaxed">
+            <p className="text-xl md:text-2xl italic font-bold text-foreground leading-relaxed">
               &quot;{testimonials[index].comment}&quot;
             </p>
             
@@ -68,7 +68,7 @@ export default function TestimonialSlider() {
               <div className="text-primary font-black uppercase tracking-[0.2em] italic">
                 {testimonials[index].name}
               </div>
-              <div className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1">
+              <div className="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">
                 {testimonials[index].location} / Manisa
               </div>
             </div>
@@ -80,13 +80,13 @@ export default function TestimonialSlider() {
       <div className="flex justify-center gap-4 mt-8">
         <button 
           onClick={prev}
-          className="size-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-primary transition-all active:scale-90"
+          className="size-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-primary transition-all active:scale-90"
         >
           <ChevronLeft className="size-6" />
         </button>
         <button 
           onClick={next}
-          className="size-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-primary transition-all active:scale-90"
+          className="size-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-primary transition-all active:scale-90"
         >
           <ChevronRight className="size-6" />
         </button>
@@ -98,7 +98,7 @@ export default function TestimonialSlider() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${index === i ? "w-8 bg-primary" : "w-2 bg-white/10"}`}
+            className={`h-1.5 rounded-full transition-all duration-500 ${index === i ? "w-8 bg-primary" : "w-2 bg-slate-200"}`}
           />
         ))}
       </div>
