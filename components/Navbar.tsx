@@ -40,66 +40,69 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="fixed top-0 z-[100] w-full bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 py-4 ">
-                <a
-                    href={`tel:${contact.phoneCall}`}
-                    className={`text-red-500 flex justify-center font-bold text-3xl text-center`}
-                >
-                    {contact.phoneCall}
-                </a>
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        {!isHome && (
-                            <Link href="/" className="group flex items-center gap-2 mr-2">
-                                <ArrowLeft className="text-primary size-5 group-hover:-translate-x-1 transition-transform" />
-                            </Link>
-                        )}
-                        <Link
-                            href="/"
-                            scroll={false}
-                            className="flex items-center gap-2 relative z-[110]"
-                        >
-                            <div className="size-8 md:size-10 bg-primary rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                                <Wrench className="text-white size-5 md:size-6" />
-                            </div>
-                            <span className={`text-lg md:text-xl font-black tracking-tighter text-foreground uppercase italic ${!isHome ? 'hidden xs:block' : 'block'}`}>
-                                Manisa Servis
-                            </span>
-                        </Link>
-                    </div>
-
-                    {/* Desktop Menu */}
-                    <div className="hidden lg:flex gap-6 text-xs font-bold uppercase tracking-widest text-slate-500">
-                        {navLinks.map((link) => (
-                            <Link key={link.name} href={link.href} className="hover:text-primary transition-colors whitespace-nowrap">
-                                {link.name}
-                            </Link>
-                        ))}
-                    </div>
-
-                    {/* Desktop CTA - Shown only after 1000px scroll */}
-                    <div className="hidden md:block">
-                        <a
-                            href={`tel:${contact.phoneCall}`}
-                            className={`bg-primary hover:bg-primary/90 text-white font-black py-2.5 px-6 rounded-full text-sm transition-all duration-500 shadow-xl shadow-primary/20 hover:scale-105 inline-block ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-4 scale-90 pointer-events-none'}`}
-                        >
-                            HEMEN ARA
-                        </a>
-                    </div>
-
-                    {/* Mobile Menu Button */}
-                    <button
-                        type="button"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            setIsMenuOpen(!isMenuOpen);
-                        }}
-                        className="md:hidden relative z-[110] p-2 text-foreground hover:bg-slate-50 rounded-xl transition-colors focus:outline-none"
-                        aria-label="Toggle Menu"
+            <nav className="fixed top-0 z-[100] w-full bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-3">
+                <div className="max-w-7xl mx-auto flex flex-col gap-2">
+                    <a
+                        href={`tel:${contact.phoneCall}`}
+                        className="text-primary flex justify-center md:justify-end font-black text-xl md:text-2xl tracking-tighter hover:scale-105 transition-transform"
                     >
-                        {isMenuOpen ? <X className="size-8 text-primary" /> : <Menu className="size-8" />}
-                    </button>
+                        {contact.phone}
+                    </a>
+                    
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                            {!isHome && (
+                                <Link href="/" className="group flex items-center gap-2 mr-2">
+                                    <ArrowLeft className="text-primary size-5 group-hover:-translate-x-1 transition-transform" />
+                                </Link>
+                            )}
+                            <Link
+                                href="/"
+                                scroll={false}
+                                className="flex items-center gap-2 relative z-[110]"
+                            >
+                                <div className="size-8 md:size-10 bg-primary rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                                    <Wrench className="text-white size-5 md:size-6" />
+                                </div>
+                                <span className="text-lg md:text-xl font-black tracking-tighter text-foreground uppercase italic block">
+                                    Manisa Merkez Servisi
+                                </span>
+                            </Link>
+                        </div>
+
+                        {/* Desktop Menu */}
+                        <div className="hidden lg:flex gap-6 text-xs font-bold uppercase tracking-widest text-slate-500">
+                            {navLinks.map((link) => (
+                                <Link key={link.name} href={link.href} className="hover:text-primary transition-colors whitespace-nowrap">
+                                    {link.name}
+                                </Link>
+                            ))}
+                        </div>
+
+                        {/* Desktop CTA - Shown only after 1000px scroll */}
+                        <div className="hidden md:block">
+                            <a
+                                href={`tel:${contact.phoneCall}`}
+                                className={`bg-primary hover:bg-primary/90 text-white font-black py-2.5 px-6 rounded-full text-sm transition-all duration-500 shadow-xl shadow-primary/20 hover:scale-105 inline-block ${showButton ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-4 scale-90 pointer-events-none'}`}
+                            >
+                                HEMEN ARA
+                            </a>
+                        </div>
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            type="button"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setIsMenuOpen(!isMenuOpen);
+                            }}
+                            className="md:hidden relative z-[110] p-2 text-foreground hover:bg-slate-50 rounded-xl transition-colors focus:outline-none"
+                            aria-label="Toggle Menu"
+                        >
+                            {isMenuOpen ? <X className="size-8 text-primary" /> : <Menu className="size-8" />}
+                        </button>
+                    </div>
                 </div>
             </nav>
 

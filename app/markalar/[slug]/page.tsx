@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Phone, MessageCircle, Wrench, ShieldCheck, Clock, Star } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -41,19 +42,6 @@ export default async function BrandPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
-        "name": `Manisa ${brand.name} Teknik Servisi`,
-        "image": "https://manisabeyazesyaservisi.com/beyaz-esya-tamiri.jpg",
-        "telephone": contact.phoneCall,
-        "url": `https://manisabeyazesyaservisi.com/markalar/${brand.slug}`,
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Manisa",
-          "addressCountry": "TR"
-        }
-      },
-      {
         "@type": "Service",
         "serviceType": `${brand.name} Beyaz Eşya Tamiri`,
         "provider": {
@@ -82,7 +70,7 @@ export default async function BrandPage({ params }: Props) {
 
       <main className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
         <header className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 mb-8">
+          <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 mb-8 shadow-sm">
             <div className="size-2 bg-primary rounded-full animate-pulse" />
             <span className="text-xs font-black tracking-[0.2em] uppercase text-slate-500 italic">Teknik Servis Uzmanlığı</span>
           </div>
@@ -96,7 +84,6 @@ export default async function BrandPage({ params }: Props) {
           </p>
         </header>
 
-        {/* Tactical Section: Content Depth (Fixes Thin Content) */}
         <section className="mb-20 bg-white/50 border border-slate-100 rounded-[40px] p-8 md:p-12 backdrop-blur-sm">
            <div className="prose prose-slate max-w-none">
               <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">{brand.name} Marka Cihazlarda Uzman Çözümler</h2>
@@ -150,7 +137,6 @@ export default async function BrandPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Tactical Section: Testimonials (Fixes Lack of Reviews) */}
         <section className="mb-20">
            <h2 className="text-3xl font-black text-foreground italic uppercase mb-8 tracking-tight text-center">Müşteri Deneyimleri</h2>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -175,7 +161,6 @@ export default async function BrandPage({ params }: Props) {
                 {brand.name}
               </div>
            </div>
-           
            <div className="relative z-10">
               <h4 className="text-foreground font-black italic uppercase text-3xl md:text-5xl mb-6 tracking-tight leading-none">
                 {brand.name} Cihazınız <br /> Emin Ellerde
@@ -194,7 +179,6 @@ export default async function BrandPage({ params }: Props) {
            </div>
         </section>
 
-        {/* Tactical Section: Internal Linking (Other Brands) */}
         <section className="pt-12 border-t border-slate-100">
            <h2 className="text-xl font-black text-foreground italic uppercase mb-8 tracking-tight opacity-50 text-center">Diğer Uzmanlık Alanlarımız</h2>
            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
@@ -207,9 +191,7 @@ export default async function BrandPage({ params }: Props) {
         </section>
       </main>
 
-      <footer className="py-12 px-6 border-t border-slate-100 text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
-        © 2026 Manisa Teknik Servis - {brand.name} Marka Uzmanlığı
-      </footer>
+      <Footer />
     </div>
   );
 }

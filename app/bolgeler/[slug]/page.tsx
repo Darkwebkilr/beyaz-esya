@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Phone, MessageCircle, MapPin, Star, Clock, ShieldCheck, Wrench } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 type Props = {
@@ -35,7 +36,6 @@ export default async function DistrictPage({ params }: Props) {
 
   if (!district) notFound();
 
-  // Pick some nearby districts for internal linking
   const nearbyDistricts = districts
     .filter(d => d.slug !== district.slug)
     .sort(() => 0.5 - Math.random())
@@ -44,31 +44,6 @@ export default async function DistrictPage({ params }: Props) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": `Manisa Beyaz Eşya Servisi - ${district.name}`,
-        "image": "https://manisabeyazesyaservisi.com/beyaz-esya-tamiri.jpg",
-        "telephone": contact.phoneCall,
-        "url": `https://manisabeyazesyaservisi.com/bolgeler/${district.slug}`,
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Manisa",
-          "addressRegion": district.name,
-          "addressCountry": "TR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 38.614,
-          "longitude": 27.429
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "08:30",
-          "closes": "20:00"
-        }
-      },
       {
         "@type": "Service",
         "serviceType": "Beyaz Eşya Tamiri",
@@ -120,7 +95,6 @@ export default async function DistrictPage({ params }: Props) {
           </p>
         </header>
 
-        {/* Tactical Section: Detailed Content (Fixes Thin Content) */}
         <section className="mb-20 bg-white/50 border border-slate-100 rounded-[40px] p-8 md:p-12 backdrop-blur-sm">
           <div className="prose prose-slate max-w-none">
             <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">{district.name}&apos;de Profesyonel Teknik Destek</h2>
@@ -169,7 +143,6 @@ export default async function DistrictPage({ params }: Props) {
           ))}
         </div>
 
-        {/* Tactical Section: Testimonials (Fixes Lack of Reviews) */}
         <section className="mb-20">
            <h2 className="text-3xl font-black text-foreground italic uppercase mb-8 tracking-tight text-center">{district.name} Müşteri Yorumları</h2>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -194,7 +167,6 @@ export default async function DistrictPage({ params }: Props) {
            <div className="absolute top-0 right-0 p-12 opacity-[0.03]">
              <MapPin className="size-64 text-primary" />
            </div>
-           
            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
              <div>
                <h2 className="text-3xl md:text-4xl font-black text-foreground italic uppercase mb-6 tracking-tight">Hizmet Alanımız</h2>
@@ -210,7 +182,6 @@ export default async function DistrictPage({ params }: Props) {
                  ))}
                </div>
              </div>
-             
              <div className="bg-white border border-slate-100 p-10 rounded-[40px] shadow-2xl shadow-primary/10">
                 <h4 className="text-foreground font-black italic uppercase text-2xl mb-6 tracking-tight">Hemen Arayın, <br /> Kapınıza Gelelim</h4>
                 <div className="space-y-4">
@@ -225,7 +196,6 @@ export default async function DistrictPage({ params }: Props) {
            </div>
         </section>
 
-        {/* Tactical Section: Internal Linking (Nearby Districts) */}
         <section className="pt-12 border-t border-slate-100">
            <h2 className="text-xl font-black text-foreground italic uppercase mb-8 tracking-tight opacity-50">Hizmet Verdiğimiz Diğer Mahalleler</h2>
            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -238,9 +208,7 @@ export default async function DistrictPage({ params }: Props) {
         </section>
       </main>
 
-      <footer className="py-12 px-6 border-t border-slate-100 text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
-        © 2026 Manisa Teknik Servis - {district.name} Yerel Ekibi
-      </footer>
+      <Footer />
     </div>
   );
 }

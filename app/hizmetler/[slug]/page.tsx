@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Wrench, ShieldCheck, Clock, Star, MapPin, CheckCi
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -41,19 +42,6 @@ export default async function ServicePage({ params }: Props) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": `Manisa ${service.name} Teknik Servisi`,
-        "image": "https://manisabeyazesyaservisi.com/beyaz-esya-tamiri.jpg",
-        "telephone": contact.phoneCall,
-        "url": `https://manisabeyazesyaservisi.com/hizmetler/${service.slug}`,
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Manisa",
-          "addressCountry": "TR"
-        }
-      },
       {
         "@type": "Service",
         "serviceType": service.name,
@@ -112,8 +100,6 @@ export default async function ServicePage({ params }: Props) {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2 space-y-12">
-            
-            {/* Tactical Section: Content Depth (Fixes Thin Content) */}
             <section className="bg-white/50 border border-slate-50 rounded-[40px] p-8 md:p-12 backdrop-blur-sm">
               <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">Hizmet Detayları ve Kapsamımız</h2>
               <div className="prose prose-slate max-w-none">
@@ -168,7 +154,6 @@ export default async function ServicePage({ params }: Props) {
               </div>
             </section>
 
-            {/* Tactical Section: Testimonials (Fixes Lack of Reviews) */}
             <section>
                <h2 className="text-2xl font-black text-foreground italic uppercase mb-8 tracking-tight text-center md:text-left">Müşteri Yorumları</h2>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -200,7 +185,6 @@ export default async function ServicePage({ params }: Props) {
                   <MessageCircle className="size-6" /> WHATSAPP
                 </a>
               </div>
-              
               <div className="mt-8 pt-8 border-t border-slate-50 text-left">
                  <div className="flex items-center gap-2 text-xs font-black text-slate-400 uppercase tracking-widest mb-4">
                     <Clock className="size-3 text-primary" /> Çalışma Saatleri
@@ -230,9 +214,7 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </main>
 
-      <footer className="py-12 px-6 border-t border-slate-100 text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
-        © 2026 Manisa Teknik Servis - {service.name} Bölümü
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { Phone, MessageCircle, Wrench, ShieldCheck, Clock, CheckCircle2, Star, M
 import { services, districts, brands, contact } from "@/app/constants";
 import Navbar from "@/components/Navbar";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const faqs = [
@@ -16,71 +17,6 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": "Manisa Beyaz Eşya Servisi",
-        "image": "https://manisabeyazesyaservisi.com/beyaz-esya-tamiri.jpg",
-        "@id": "https://manisabeyazesyaservisi.com/#organization",
-        "url": "https://manisabeyazesyaservisi.com",
-        "telephone": contact.phoneCall,
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Merkez Mahalle No:1",
-          "addressLocality": "Manisa",
-          "postalCode": "45000",
-          "addressCountry": "TR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 38.614,
-          "longitude": 27.429
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "08:30",
-          "closes": "20:00"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "124"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Ahmet Y." },
-            "datePublished": "2026-03-10",
-            "reviewBody": "Buzdolabım soğutmuyordu, aradıktan 40 dakika sonra geldiler. Motor arızasını hemen tespit edip yerinde çözdüler.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Melis K." },
-            "datePublished": "2026-02-15",
-            "reviewBody": "Çamaşır makinesi kart arızasını aynı gün gelip tamir ettiler. Hem çok uygun fiyatlı hem de profesyonel hizmet.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-          }
-        ]
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Beyaz Eşya Tamiri",
-        "provider": { "@id": "https://manisabeyazesyaservisi.com/#organization" },
-        "areaServed": { "@type": "City", "name": "Manisa" },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Tamir Hizmetleri",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buzdolabı Tamiri" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Çamaşır Makinesi Tamiri" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bulaşık Makinesi Tamiri" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Klima Servisi" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kombi Bakımı" } }
-          ]
-        }
-      },
       {
         "@type": "FAQPage",
         "mainEntity": faqs.map(faq => ({
@@ -153,10 +89,8 @@ export default function Home() {
           </div>
 
           <div className="relative lg:block hidden">
-            {/* Background solid offset block */}
             <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-[40px] -z-10 opacity-10" />
             
-            {/* Main Image Container */}
             <div className="relative aspect-[4/5] rounded-[40px] overflow-hidden border-2 border-slate-100 shadow-2xl transition-all duration-500 hover:-translate-x-2 hover:-translate-y-2">
               <Image
                 src="/beyaz-esya-tamiri.jpg"
@@ -166,10 +100,7 @@ export default function Home() {
                 className="object-cover transition-all duration-700"
                 priority
               />
-              
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              
-              {/* Minimalist Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="flex items-end justify-between">
                   <div>
@@ -182,8 +113,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Floating Detail Elements */}
             <div className="absolute -top-6 -right-6 p-4 bg-accent rounded-2xl shadow-xl -rotate-6 hover:rotate-0 transition-transform duration-500">
                <Star className="text-white size-6 fill-white" />
             </div>
@@ -206,57 +135,6 @@ export default function Home() {
                 </span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Us Section */}
-      <section id="hakkimizda" className="py-24 px-6 max-w-7xl mx-auto overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="relative order-2 lg:order-1">
-             <div className="space-y-8">
-                <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                  <span className="text-xs font-black tracking-[0.2em] uppercase text-primary italic">Biz Kimiz?</span>
-                </div>
-                <h2 className="text-5xl md:text-7xl font-black text-foreground italic uppercase tracking-tighter leading-none">
-                  Manisa&apos;nın <br />
-                  <span className="text-primary">Güven Mirası</span>
-                </h2>
-                <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
-                   <p>
-                     40 yılı aşkın bir süre önce Manisa merkezinde küçük bir atölye olarak başladığımız bu yolculukta, bugün tüm ilçelere yayılan dev bir teknik servis ağına dönüştük. Amacımız sadece bozulan cihazları tamir etmek değil, Manisalı hemşerilerimizin günlük konforunu kesintisiz sürdürmelerini sağlamaktır.
-                   </p>
-                   <p>
-                     Yunusemre&apos;den Köprübaşı&apos;na kadar Manisa&apos;nın her karışını avucumuzun içi gibi biliyoruz. Arçelik, Beko, Bosch gibi dünya devlerinin teknolojilerini yakından takip ediyor, her yıl düzenli eğitim alan sertifikalı teknisyenlerimizle &quot;imkansız&quot; denilen arızaları bile yerinde çözüyoruz.
-                   </p>
-                </div>
-                <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
-                   <div>
-                      <div className="text-foreground font-black italic text-xl uppercase mb-1">Dürüst Hizmet</div>
-                      <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Sürpriz Fiyat Yok</p>
-                   </div>
-                   <div>
-                      <div className="text-foreground font-black italic text-xl uppercase mb-1">Yerel Güç</div>
-                      <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Manisa&apos;nın Öz Sermayesi</p>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div className="relative order-1 lg:order-2">
-             <div className="relative aspect-square rounded-[60px] overflow-hidden border-2 border-slate-100 shadow-2xl">
-                <Image 
-                  src="/bulasık-makinesi-servisi.jpg" 
-                  alt="Hakkımızda - Manisa Beyaz Eşya Servisi"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                
-                <div className="absolute top-10 right-10 size-32 bg-white flex flex-col items-center justify-center rounded-full shadow-2xl rotate-12 transition-transform">
-                   <span className="text-4xl font-black text-black leading-none">40</span>
-                   <span className="text-[10px] font-black text-black uppercase tracking-widest text-center">Yıllık<br/>Tecrübe</span>
-                </div>
-             </div>
           </div>
         </div>
       </section>
@@ -300,7 +178,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Us Section */}
       <section id="neden-biz" className="py-24 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -328,7 +205,6 @@ export default function Home() {
             </div>
           </div>
           <div className="relative min-h-[450px] lg:h-[600px] rounded-[40px] overflow-hidden border border-slate-100 flex items-center justify-center bg-white">
-             
              <TestimonialSlider />
           </div>
         </div>
@@ -355,20 +231,7 @@ export default function Home() {
               "tevfikiye-mahallesi",
               "uncubozkoy-mahallesi",
               "yunus-emre-mahallesi"
-            ].includes(d.slug) || [
-              "75. Yıl Mahallesi",
-              "Akpınar Mahallesi",
-              "Alaybey Mahallesi",
-              "Anafartalar Mahallesi",
-              "Güzelyurt Mahallesi",
-              "Karaköy Mahallesi",
-              "Laleli Mahallesi",
-              "Muradiye Mahallesi",
-              "Şehzadeler Mahallesi",
-              "Tevfikiye Mahallesi",
-              "Uncubozköy Mahallesi",
-              "Yunus Emre Mahallesi"
-            ].includes(d.name))
+            ].includes(d.slug))
             .map((district, idx) => (
               <Link key={idx} href={`/bolgeler/${district.slug}`} className="p-4 bg-white border border-slate-100 rounded-2xl flex flex-col items-center gap-2 hover:bg-white hover:border-primary/20 transition-all group shadow-sm">
                 <MapPin className="size-5 text-primary group-hover:scale-110 transition-transform" />
@@ -399,46 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="iletisim" className="py-24 px-6 max-w-7xl mx-auto text-center border-t border-slate-100">
-        <h2 className="text-5xl md:text-9xl font-black text-slate-100 uppercase italic mb-8 tracking-tighter">Hemen Arayın</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mt-12">
-          <div>
-            <h6 className="text-primary font-black uppercase tracking-widest mb-6 italic">Manisa Ofis</h6>
-            <p className="text-slate-600 text-lg font-medium">
-              Şehzadeler, Yunusemre ve civar tüm ilçelere aynı gün gezici servis ekiplerimiz ulaşmaktadır.
-            </p>
-          </div>
-          <div>
-            <h6 className="text-primary font-black uppercase tracking-widest mb-6 italic">Çalışma Saatleri</h6>
-            <p className="text-slate-600 text-lg font-medium">
-              Hafta İçi: 08:30 - 20:00<br />
-              Cumartesi: 09:00 - 18:00<br />
-              Pazar: Kapalı (Sadece Acil)
-            </p>
-          </div>
-          <div>
-            <h6 className="text-primary font-black uppercase tracking-widest mb-6 italic">İletişim Hattı</h6>
-            <a href={`tel:${contact.phoneCall}`} className="text-foreground text-3xl font-black block mb-2 hover:text-primary transition-colors italic">
-              {contact.phone}
-            </a>
-            <p className="text-slate-500">{contact.email}</p>
-          </div>
-        </div>
-        <div className="mt-12 p-8 bg-slate-50 border border-slate-100 rounded-3xl text-left">
-          <p className="text-[10px] md:text-xs text-slate-500 leading-relaxed font-bold uppercase tracking-wider">
-            <span className="text-primary block mb-2 underline decoration-2 underline-offset-4">YASAL BİLGİLENDİRME VE FERAGATNAME:</span>
-            Manisa Beyaz Eşya Servisi, bölgedeki tüm marka ve model beyaz eşyalar için hizmet veren <span className="text-foreground italic">TAMAMEN ÖZEL BİR TEKNİK SERVİS</span> kuruluşudur. Firmamızın herhangi bir markanın <span className="text-foreground underline decoration-red-500">YETKİLİ SERVİSİ İLE BİR BAĞLANTISI VEYA ANLAŞMASI BULUNMAMAKTADIR.</span> Sadece <span className="text-foreground">GARANTİ SÜRESİ DOLMUŞ (GARANTİ DIŞI)</span> cihazlara teknik destek ve onarım hizmeti sunmaktayız. Web sitemizde kullanılan markalar ve logolar, ilgili hak sahiplerine ait olup, sadece tüketicinin bilgilendirilmesi amacıyla "özel servis" hizmeti verdiğimizi belirtmek için kullanılmıştır.
-          </p>
-        </div>
-        <div className="mt-24 pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400 font-bold uppercase tracking-[0.3em]">
-          <p>© 2026 Manisa Beyaz Eşya Servisi. Design with Evolution.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-foreground transition-colors">Yasal Haklar</a>
-            <a href="#" className="hover:text-foreground transition-colors">Gizlilik</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Floating CTA for Mobile */}
       <div className="fixed bottom-6 left-6 right-6 z-50 flex gap-4 md:hidden">
