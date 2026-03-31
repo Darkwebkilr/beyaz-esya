@@ -4,6 +4,7 @@ export const services = [
     name: "Buzdolabı Tamiri",
     desc: "Soğutma sorunları, motor değişimi ve gaz dolumu.",
     img: "/buzdolabı-servisi.jpg",
+    gallery: ["/buzdolabı-servisi-2.webp", "/buzdolabi-servisi-3.webp", "/beyaz-esya-tamiri.jpg"],
     details:
       "Buzdolabınız yeterince soğutmuyor mu? Veya gürültülü mü çalışıyor? Manisa genelinde tüm markaların buzdolabı tamiri, motor değişimi, gaz dolumu ve kart onarımı işlemlerini yerinde ve profesyonel olarak yapıyoruz.",
   },
@@ -11,7 +12,8 @@ export const services = [
     slug: "camasir-makinesi-servisi",
     name: "Çamaşır Makinesi",
     desc: "Su almama, gürültülü çalışma ve kart tamiri.",
-    img: "/beyaz-esya-tamiri.jpg",
+    img: "/camasir-makinesi-servisi.webp",
+    gallery: ["/camasir-makinesi-servisi-2.webp", "/camasir-makinesi-servisi-3.webp", "/beyaz-esya-tamiri.jpg"],
     details:
       "Çamaşır makineniz su boşaltmıyor mu? Sıkma sırasında aşırı ses mi çıkarıyor? Uzman ekibimizle tambur değişimi, pompa onarımı ve elektronik kart tamiri gibi her türlü sorunu yerinde çözüyoruz.",
   },
@@ -20,14 +22,16 @@ export const services = [
     name: "Bulaşık Makinesi",
     desc: "Yıkama problemleri ve rezistans değişimleri.",
     img: "/bulasık-makinesi-servisi.jpg",
+    gallery: ["/bulasik-makinesi-servisi.webp", "/beyaz-esya-servisi-manisa.webp", "/beyaz-esya-tamiri.jpg"],
     details:
-      "Bulaşıklarınız lekeli mi çıkıyor? Makineniz programı bitirmiyor mu? Rezistans değişimi, fıskiye temizliği ve tüm mekanik aksam onarımlarıyla bulaşık makinenizi ilk günkü performansına kavuşturuyoruz.",
+      "Bulaşıklarınız lekeli mi çıkıyor? Makineniz programı bitirmiyor mu? Rezistans değişimleri, fıskiye temizliği ve tüm mekanik aksam onarımlarıyla bulaşık makinenizi ilk günkü performansına kavuşturuyoruz.",
   },
   {
     slug: "klima-servisi",
     name: "Klima Servisi",
     desc: "Bakım, montaj ve gaz dolumu hizmetleri.",
     img: "/klima-servisi.webp",
+    gallery: ["/klima-servisi-2.webp", "/klima-servisi-3.webp", "/beyaz-esya-servisi-manisa.webp"],
     details:
       "Klimanız ısıtmıyor mu veya soğutmuyor mu? Periyodik bakım, gaz dolumu, montaj ve demontaj işlemlerinde Manisa'nın en hızlı teknik ekibiyiz.",
   },
@@ -36,6 +40,7 @@ export const services = [
     name: "Kombi Bakımı",
     desc: "Yıllık bakım, petek temizliği ve arıza onarım.",
     img: "/kombi-tamiri.jpg",
+    gallery: ["/kombi-servisi.webp", "/beyaz-esya-tamiri.jpg", "/beyaz-esya-servisi-manisa.webp"],
     details:
       "Kış gelmeden kombi bakımınızı yaptırın, tasarruf edin. Petek temizliği, eşanjör bakımı ve genleşme tankı kontrolleriyle kombiniz her zaman güvende ve verimli olsun.",
   },
@@ -52,7 +57,7 @@ export const districts = [
     slug: "adakale-mahallesi",
     name: "Adakale Mahallesi",
     details:
-      "Adakale'content tarihi dokusunda, evlerinizdeki teknolojik yardımcılarınızın bakımını üstleniyoruz. Bulaşık makinesi su sızdırdığında veya fırınınız yeterince ısıtmadığında Adakale'nin yerel kahramanları olarak anında müdahale ediyoruz. Adakale sakinleri için dürüst esnaflık ve kaliteli işçilik sunuyoruz.",
+      "Adakale'nin tarihi dokusunda, evlerinizdeki teknolojik yardımcılarınızın bakımını üstleniyoruz. Bulaşık makinesi su sızdırdığında veya fırınınız yeterince ısıtmadığında Adakale'nin yerel kahramanları olarak anında müdahale ediyoruz. Adakale sakinleri için dürüst esnaflık ve kaliteli işçilik sunuyoruz.",
   },
   {
     slug: "adnan-menderes-mahallesi",
@@ -160,7 +165,7 @@ export const districts = [
     slug: "belenyenice-mahallesi",
     name: "Belenyenice Mahallesi",
     details:
-      "Belenyenice sakinlerine özel, hızlı ve profesyonel beyaz eşya teknik servis desteği sunuyoruz. Belenyenice genelinde buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Belenyenice sakinlerine özel, hızlı and profesyonel beyaz eşya teknik servis desteği sunuyoruz. Belenyenice genelinde buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "cumhuriyet-mahallesi",
@@ -172,7 +177,7 @@ export const districts = [
     slug: "camkoy-mahallesi",
     name: "Çamköy Mahallesi",
     details:
-      "Çamköy genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Çamköy yerel ekibimiz, kaliteli işçilik ve uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
+      "Çamköy genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Çamköy yerel ekibimiz, kaliteli işçilik and uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
   },
   {
     slug: "carsi-mahallesi",
@@ -190,19 +195,19 @@ export const districts = [
     slug: "cinarlikuyu-mahallesi",
     name: "Çınarlıkuyu Mahallesi",
     details:
-      "Çınarlıkuyu bölgesinde profesyonel beyaz eşya tamiri ve bakım hizmetleri veriyoruz. Çınarlıkuyu'da hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım ve orijinal parça desteksiyle yanınızdayız.",
+      "Çınarlıkuyu bölgesinde profesyonel beyaz eşya tamiri and bakım hizmetleri veriyoruz. Çınarlıkuyu'da hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım and orijinal parça desteksiyle yanınızdayız.",
   },
   {
     slug: "dere-mahallesi",
     name: "Dere Mahallesi",
     details:
-      "Dere Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Buzdolabı soğutma sorunları, çamaşır makinesi yıkama problemleri gibi durumlarda Dere Mahallesi sakinlerine özel hızlı ve ekonomik çözümler sunuyoruz.",
+      "Dere Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Buzdolabı soğutma sorunları, çamaşır makinesi yıkama problemleri gibi durumlarda Dere Mahallesi sakinlerine özel hızlı and ekonomik çözümler sunuyoruz.",
   },
   {
     slug: "dilsikar-mahallesi",
     name: "Dilşikar Mahallesi",
     details:
-      "Dilşikar Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle Dilşikar sakinlerinin beyaz eşya sorunlarına kalıcı ve profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
+      "Dilşikar Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle Dilşikar sakinlerinin beyaz eşya sorunlarına kalıcı and profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
   },
   {
     slug: "dincer-mahallesi",
@@ -214,13 +219,13 @@ export const districts = [
     slug: "ege-mahallesi",
     name: "Ege Mahallesi",
     details:
-      "Ege Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Ege genelinde buzdolabı tamiri, kombi bakımı ve klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
+      "Ege Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Ege genelinde buzdolabı tamiri, kombi bakımı and klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
   },
   {
     slug: "gediz-mahallesi",
     name: "Gediz Mahallesi",
     details:
-      "Gediz Mahallesi'nde beyaz eşya tamiri ve periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Gediz sakinleri için kaliteli ve dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
+      "Gediz Mahallesi'nde beyaz eşya tamiri and periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Gediz sakinleri için kaliteli and dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
   },
   {
     slug: "goktasli-mahallesi",
@@ -232,19 +237,19 @@ export const districts = [
     slug: "guzelyurt-mahallesi",
     name: "Güzelyurt Mahallesi",
     details:
-      "Güzelyurt Mahallesi beyaz eşya servisi ekibimizle, evinizdeki tüm elektronik ev aletlerinin bakım ve onarımını üstleniyoruz. Güzelyurt'ta güvenilir ve hızlı servis arayanların ilk tercihiyiz. Arçelik, Bosch, Ariston ve tüm markalarda yanınızdayız.",
+      "Güzelyurt Mahallesi beyaz eşya servisi ekibimizle, evinizdeki tüm elektronik ev aletlerinin bakım and onarımını üstleniyoruz. Güzelyurt'ta güvenilir and hızlı servis arayanların ilk tercihiyiz. Arçelik, Bosch, Ariston and tüm markalarda yanınızdayız.",
   },
   {
     slug: "guzelkoy-mahallesi",
     name: "Güzelköy Mahallesi",
     details:
-      "Güzelköy sakinlerine özel, hızlı ve profesyonel beyaz eşya teknik servis desteği sunuyoruz. Güzelköy genelinde buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Güzelköy sakinlerine özel, hızlı and profesyonel beyaz eşya teknik servis desteği sunuyoruz. Güzelköy genelinde buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "hacihaliller-mahallesi",
     name: "Hacıhaliller Mahallesi",
     details:
-      "Hacıhaliller genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Hacıhaliller yerel ekibimiz, kaliteli işçilik ve uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
+      "Hacıhaliller genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Hacıhaliller yerel ekibimiz, kaliteli işçilik and uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
   },
   {
     slug: "hafsa-sultan-mahallesi",
@@ -262,19 +267,19 @@ export const districts = [
     slug: "hamzabeyli-mahallesi",
     name: "Hamzabeyli Mahallesi",
     details:
-      "Hamzabeyli bölgesinde profesyonel beyaz eşya tamiri ve bakım hizmetleri veriyoruz. Hamzabeyli'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım ve orijinal parça desteksiyle yanınızdayız.",
+      "Hamzabeyli bölgesinde profesyonel beyaz eşya tamiri and bakım hizmetleri veriyoruz. Hamzabeyli'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım and orijinal parça desteksiyle yanınızdayız.",
   },
   {
     slug: "ibrahimcelebi-mahallesi",
     name: "İbrahimçelebi Mahallesi",
     details:
-      "İbrahimçelebi Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. İbrahimçelebi'de buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "İbrahimçelebi Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. İbrahimçelebi'de buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "ishakcelebi-mahallesi",
     name: "İshakçelebi Mahallesi",
     details:
-      "İshakçelebi Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle İshakçelebi sakinlerinin beyaz eşya sorunlarına kalıcı ve profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
+      "İshakçelebi Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle İshakçelebi sakinlerinin beyaz eşya sorunlarına kalıcı and profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
   },
   {
     slug: "kagan-mahallesi",
@@ -286,13 +291,13 @@ export const districts = [
     slug: "kale-mahallesi",
     name: "Kale Mahallesi",
     details:
-      "Kale Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Kale genelinde buzdolabı tamiri, kombi bakımı ve klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
+      "Kale Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Kale genelinde buzdolabı tamiri, kombi bakımı and klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
   },
   {
     slug: "kalemli-mahallesi",
     name: "Kalemli Mahallesi",
     details:
-      "Kalemli Mahallesi'nde beyaz eşya tamiri ve periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Kalemli sakinleri için kaliteli ve dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
+      "Kalemli Mahallesi'nde beyaz eşya tamiri and periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Kalemli sakinleri için kaliteli and dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
   },
   {
     slug: "karaagacli-mahallesi",
@@ -304,13 +309,13 @@ export const districts = [
     slug: "karaoglanli-mahallesi",
     name: "Karaoğlanlı Mahallesi",
     details:
-      "Karaoğlanlı sakinlerine özel, hızlı ve profesyonel beyaz eşya teknik servis desteği sunuyoruz. Karaoğlanlı genelinde buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Karaoğlanlı sakinlerine özel, hızlı and profesyonel beyaz eşya teknik servis desteği sunuyoruz. Karaoğlanlı genelinde buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "karayenice-mahallesi",
     name: "Karayenice Mahallesi",
     details:
-      "Karayenice genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Karayenice yerel ekibimiz, kaliteli işçilik ve uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
+      "Karayenice genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Karayenice yerel ekibimiz, kaliteli işçilik and uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
   },
   {
     slug: "kazim-karabekir-mahallesi",
@@ -328,37 +333,37 @@ export const districts = [
     slug: "kocatepe-mahallesi",
     name: "Kocatepe Mahallesi",
     details:
-      "Kocatepe bölgesinde profesyonel beyaz eşya tamiri ve bakım hizmetleri veriyoruz. Kocatepe'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım ve orijinal parça desteksiyle yanınızdayız.",
+      "Kocatepe bölgesinde profesyonel beyaz eşya tamiri and bakım hizmetleri veriyoruz. Kocatepe'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım and orijinal parça desteksiyle yanınızdayız.",
   },
   {
     slug: "kuslubahce-mahallesi",
     name: "Kuşlubahçe Mahallesi",
     details:
-      "Kuşlubahçe Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Kuşlubahçe'de buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Kuşlubahçe Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Kuşlubahçe'de buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "maresal-fevzi-cakmak-mahallesi",
     name: "Mareşal Fevzi Çakmak Mahallesi",
     details:
-      "Mareşal Fevzi Çakmak Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı ve profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
+      "Mareşal Fevzi Çakmak Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı and profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
   },
   {
     slug: "merkez-efendi-mahallesi",
     name: "Merkez Efendi Mahallesi",
     details:
-      "Merkez Efendi Mahallesi'nde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Merkez Efendi genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde ve profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
+      "Merkez Efendi Mahallesi'nde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Merkez Efendi genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde and profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
   },
   {
     slug: "mesir-mahallesi",
     name: "Mesir Mahallesi",
     details:
-      "Mesir Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Mesir genelinde buzdolabı tamiri, kombi bakımı ve klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
+      "Mesir Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Mesir genelinde buzdolabı tamiri, kombi bakımı and klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
   },
   {
     slug: "mimarsinan-mahallesi",
     name: "Mimarsinan Mahallesi",
     details:
-      "Mimarsinan Mahallesi'nde beyaz eşya tamiri ve periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Mimarsinan sakinleri için kaliteli ve dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
+      "Mimarsinan Mahallesi'nde beyaz eşya tamiri and periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Mimarsinan sakinleri için kaliteli and dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
   },
   {
     slug: "muradiye-mahallesi",
@@ -370,13 +375,13 @@ export const districts = [
     slug: "nisancipasa-mahallesi",
     name: "Nişancıpaşa Mahallesi",
     details:
-      "Nişancıpaşa sakinlerine özel, hızlı ve profesyonel beyaz eşya teknik servis desteği sunuyoruz. Nişancıpaşa genelinde buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Nişancıpaşa sakinlerine özel, hızlı and profesyonel beyaz eşya teknik servis desteği sunuyoruz. Nişancıpaşa genelinde buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "nurlupinar-mahallesi",
     name: "Nurlupınar Mahallesi",
     details:
-      "Nurlupınar genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Nurlupınar yerel ekibimiz, kaliteli işçilik ve uygun fiyat avantajıyla beyaz eşya sorunlarına kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
+      "Nurlupınar genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Nurlupınar yerel ekibimiz, kaliteli işçilik and uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
   },
   {
     slug: "peker-mahallesi",
@@ -394,37 +399,37 @@ export const districts = [
     slug: "sancaklibozkoy-mahallesi",
     name: "Sancaklıbozköy Mahallesi",
     details:
-      "Sancaklıbozköy bölgesinde profesyonel beyaz eşya tamiri ve bakım hizmetleri veriyoruz. Sancaklıbozköy'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım ve orijinal parça desteksiyle yanınızdayız.",
+      "Sancaklıbozköy bölgesinde profesyonel beyaz eşya tamiri and bakım hizmetleri veriyoruz. Sancaklıbozköy'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım and orijinal parça desteksiyle yanınızdayız.",
   },
   {
     slug: "sancaklicesmebasi-mahallesi",
     name: "Sancaklıçeşmebaşı Mahallesi",
     details:
-      "Sancaklıçeşmebaşı Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Sancaklıçeşmebaşı'nda buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Sancaklıçeşmebaşı Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Sancaklıçeşmebaşı'nda buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "sancakliigdecik-mahallesi",
     name: "Sancaklıiğdecik Mahallesi",
     details:
-      "Sancaklıiğdecik Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı ve profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
+      "Sancaklıiğdecik Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı and profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
   },
   {
     slug: "sancaklikayadibi-mahallesi",
     name: "Sancaklıkayadibi Mahallesi",
     details:
-      "Sancaklıkayadibi'nde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Sancaklıkayadibi genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde ve profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
+      "Sancaklıkayadibi'nde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Sancaklıkayadibi genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde and profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
   },
   {
     slug: "sancakliuzuncinar-mahallesi",
     name: "Sancaklıuzunçınar Mahallesi",
     details:
-      "Sancaklıuzunçınar sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Sancaklıuzunçınar genelinde buzdolabı tamiri, kombi bakımı ve klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
+      "Sancaklıuzunçınar sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Sancaklıuzunçınar genelinde buzdolabı tamiri, kombi bakımı and klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
   },
   {
     slug: "sarialan-mahallesi",
     name: "Sarıalan Mahallesi",
     details:
-      "Sarıalan Mahallesi'nde beyaz eşya tamiri ve periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Sarıalan sakinleri için kaliteli ve dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
+      "Sarıalan Mahallesi'nde beyaz eşya tamiri and periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Sarıalan sakinleri için kaliteli and dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
   },
   {
     slug: "saruhan-mahallesi",
@@ -436,13 +441,13 @@ export const districts = [
     slug: "selimsahlar-mahallesi",
     name: "Selimşahlar Mahallesi",
     details:
-      "Selimşahlar sakinlerine özel, hızlı ve profesyonel beyaz eşya teknik servis desteği sunuyoruz. Selimşahlar genelinde buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Selimşahlar sakinlerine özel, hızlı and profesyonel beyaz eşya teknik servis desteği sunuyoruz. Selimşahlar genelinde buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "sehitler-mahallesi",
     name: "Şehitler Mahallesi",
     details:
-      "Şehitler genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Şehitler yerel ekibimiz, kaliteli işçilik ve uygun fiyat avantajıyla beyaz eşya sorunlarına kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
+      "Şehitler Mahallesi genelinde profesyonel beyaz eşya tamir and bakım hizmeti veriyoruz. Şehitler yerel ekibimiz, kaliteli işçilik and uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
   },
   {
     slug: "tepecik-mahallesi",
@@ -460,37 +465,37 @@ export const districts = [
     slug: "tevfikiye-mahallesi",
     name: "Tevfikiye Mahallesi",
     details:
-      "Tevfikiye bölgesinde profesyonel beyaz eşya tamiri ve bakım hizmetleri veriyoruz. Tevfikiye'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım ve orijinal parça desteksiyle yanınızdayız.",
+      "Tevfikiye bölgesinde profesyonel beyaz eşya tamiri and bakım hizmetleri veriyoruz. Tevfikiye'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım and orijinal parça desteksiyle yanınızdayız.",
   },
   {
     slug: "tilkisuleymaniye-mahallesi",
     name: "Tilkisüleymaniye Mahallesi",
     details:
-      "Tilkisüleymaniye Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Tilkisüleymaniye'de buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Tilkisüleymaniye Mahallesi sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Tilkisüleymaniye'de buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "topcuasim-mahallesi",
     name: "Topçuasım Mahallesi",
     details:
-      "Topçuasım Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı ve profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
+      "Topçuasım Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı and profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
   },
   {
     slug: "tunca-mahallesi",
     name: "Tunca Mahallesi",
     details:
-      "Tunca Mahallesi'nde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Tunca genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde ve profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
+      "Tunca Mahallesi'nde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Tunca genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde and profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
   },
   {
     slug: "turgut-ozal-mahallesi",
     name: "Turgut Özal Mahallesi",
     details:
-      "Turgut Özal Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Turgut Özal genelinde buzdolabı tamiri, kombi bakımı ve klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
+      "Turgut Özal Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. Turgut Özal genelinde buzdolabı tamiri, kombi bakımı and klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
   },
   {
     slug: "uncubozkoy-mahallesi",
     name: "Uncubozköy Mahallesi",
     details:
-      "Uncubozköy Mahallesi'nde beyaz eşya tamiri ve periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Uncubozköy sakinleri için kaliteli ve dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
+      "Uncubozköy Mahallesi'nde beyaz eşya tamiri and periyodik bakımı konusunda uzmanlaşmış ekibimizle hizmetinizdeyiz. Uncubozköy sakinleri için kaliteli and dürüst servis anlayışını benimsiyoruz. Beyaz eşyalarınızı ilk günkü performansına kavuşturuyoruz.",
   },
   {
     slug: "utku-mahallesi",
@@ -502,13 +507,13 @@ export const districts = [
     slug: "veziroglu-mahallesi",
     name: "Veziroğlu Mahallesi",
     details:
-      "Veziroğlu sakinlerine özel, hızlı ve profesyonel beyaz eşya teknik servis desteği sunuyoruz. Veziroğlu genelinde buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Veziroğlu sakinlerine özel, hızlı and profesyonel beyaz eşya teknik servis desteği sunuyoruz. Veziroğlu genelinde buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "yarhasanlar-mahallesi",
     name: "Yarhasanlar Mahallesi",
     details:
-      "Yarhasanlar genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Yarhasanlar yerel ekibimiz, kaliteli işçilik ve uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
+      "Yarhasanlar genelinde beyaz eşya servisi arayanlar için en doğru adrestesiniz. Yarhasanlar yerel ekibimiz, kaliteli işçilik and uygun fiyat avantajıyla beyaz eşya sorunlarınıza kalıcı çözümler sunuyor. 40 yıllık tecrübemizle cihazlarınız güvende.",
   },
   {
     slug: "yeniharmandali-mahallesi",
@@ -526,31 +531,31 @@ export const districts = [
     slug: "yenimahmudiye-mahallesi",
     name: "Yenimahmudiye Mahallesi",
     details:
-      "Yenimahmudiye bölgesinde profesyonel beyaz eşya tamiri ve bakım hizmetleri veriyoruz. Yenimahmudiye'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım ve orijinal parça desteksiyle yanınızdayız.",
+      "Yenimahmudiye bölgesinde profesyonel beyaz eşya tamiri and bakım hizmetleri veriyoruz. Yenimahmudiye'de hızlı randevu sistemimizle, beyaz eşya arızalarınızı aynı gün içerisinde sonlandırıyoruz. Yerinde onarım and orijinal parça desteksiyle yanınızdayız.",
   },
   {
     slug: "yenimahalle-mahallesi",
     name: "Yeni Mahalle",
     details:
-      "Yeni Mahalle sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Yeni Mahalle'de buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
+      "Yeni Mahalle sakinleri için profesyonel beyaz eşya teknik servis desteği sağlıyoruz. Yeni Mahalle'de buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında en hızlı ulaşan ekibiz. 40 yıllık tecrübemizle her zaman yanınızdayız.",
   },
   {
     slug: "yesilkoy-mahallesi",
     name: "Yeşilköy Mahallesi",
     details:
-      "Yeşilköy Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı ve profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
+      "Yeşilköy Mahallesi genelinde beyaz eşya teknik servis desteği sağlıyoruz. 40 yıllık tecrübemizle mahalle sakinlerinin beyaz eşya sorunlarına kalıcı and profesyonel çözümler sunuyoruz. Arızalı cihazlarınıza profesyonel dokunuşlar yapıyoruz.",
   },
   {
     slug: "yukaricobanisa-mahallesi",
     name: "Yukarıçobanisa Mahallesi",
     details:
-      "Yukarıçobanisa'da beyaz eşya servisi arayanlar için en doğru adrestesiniz. Yukarıçobanisa genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde ve profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
+      "Yukarıçobanisa'da beyaz eşya servisi arayanlar için en doğru adrestesiniz. Yukarıçobanisa genelinde teknik servis ağımızla, her marka beyaz eşyanın tamirini yerinde and profesyonel olarak yapıyoruz. 40 yıllık tecrübemizle yanınızdayız.",
   },
   {
     slug: "50-yil-mahallesi",
     name: "50. Yıl Mahallesi",
     details:
-      "50. Yıl Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. 50. Yıl genelinde buzdolabı tamiri, kombi bakımı ve klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
+      "50. Yıl Mahallesi sakinlerine özel, kesintisiz beyaz eşya teknik destek hizmeti sunuyoruz. 50. Yıl genelinde buzdolabı tamiri, kombi bakımı and klima montajı gibi kritik işlemlerde uzman teknisyenlerimizle görev başındayız. Orijinal parça desteksiyle hizmetinizdeyiz.",
   },
   {
     slug: "75-yil-mahallesi",
@@ -565,25 +570,25 @@ export const brands = [
     slug: "arcelik",
     name: "Arçelik",
     details:
-      "Manisa'da Arçelik marka tüm beyaz eşyalarınız için profesyonel teknik servis hizmeti sunuyoruz. Arçelik buzdolabı, çamaşır makinesi ve bulaşık makinesi arızalarında orijinal yedek parça ve uzman teknisyen kadromuzla yanınızdayız. Arçelik yetkili servis kalitesinde, yerinde ve aynı gün tamir çözümleri sunuyoruz.",
+      "Manisa'da Arçelik marka tüm beyaz eşyalarınız için profesyonel teknik servis hizmeti sunuyoruz. Arçelik buzdolabı, çamaşır makinesi and bulaşık makinesi arızalarında orijinal yedek parça and uzman teknisyen kadromuzla yanınızdayız. Arçelik yetkili servis kalitesinde, yerinde and aynı gün tamir çözümleri sunuyoruz.",
   },
   {
     slug: "beko",
     name: "Beko",
     details:
-      "Beko marka beyaz eşyalarınızın ömrünü uzatmak için Manisa genelinde profesyonel servis desteği sağlıyoruz. Beko çamaşır makinesi kart tamiri, buzdolabı motor değişimi ve bulaşık makinesi bakımlarında hızlı ve ekonomik çözümler sunuyoruz. Manisa Beko servisi olarak bir telefonla kapınızdayız.",
+      "Beko marka beyaz eşyalarınızın ömrünü uzatmak için Manisa genelinde profesyonel servis desteği sağlıyoruz. Beko çamaşır makinesi kart tamiri, buzdolabı motor değişimi and bulaşık makinesi bakımlarında hızlı and ekonomik çözümler sunuyoruz. Manisa Beko servisi olarak bir telefonla kapınızdayız.",
   },
   {
     slug: "bosch",
     name: "Bosch",
     details:
-      "Alman teknolojisi Bosch cihazlarınız için Manisa'da hassas teknik servis hizmeti veriyoruz. Bosch Serie 4, 6 ve 8 tüm modellerde orijinal parça kullanımıyla cihazınızın performansını koruyoruz. Bosch beyaz eşya arızalarında deneyimli ekibimizle profesyonel müdahale sağlıyoruz.",
+      "Alman teknolojisi Bosch cihazlarınız için Manisa'da hassas teknik servis hizmeti veriyoruz. Bosch Serie 4, 6 and 8 tüm modellerde orijinal parça kullanımıyla cihazınızın performansını koruyoruz. Bosch beyaz eşya arızalarında deneyimli ekibimizle profesyonel müdahale sağlıyoruz.",
   },
   {
     slug: "siemens",
     name: "Siemens",
     details:
-      "Siemens ev aletleri için Manisa'da özel teknik servis çözümleri üretiyoruz. iQ300, iQ500 ve iQ700 serisi tüm Siemens buzdolabı ve çamaşır makinelerinde derinlemesine arıza tespiti ve hızlı onarım yapıyoruz. Siemens kalitesine yakışır uzman servis hizmeti için bizi arayın.",
+      "Siemens ev aletleri için Manisa'da özel teknik servis çözümleri üretiyoruz. iQ300, iQ500 and iQ700 serisi tüm Siemens buzdolabı and çamaşır makinelerinde derinlemesine arıza tespiti and hızlı onarım yapıyoruz. Siemens kalitesine yakışır uzman servis hizmeti için bizi arayın.",
   },
   {
     slug: "profilo",
@@ -595,25 +600,25 @@ export const brands = [
     slug: "ariston",
     name: "Ariston",
     details:
-      "Ariston marka beyaz eşyalarınızın yüksek performansla çalışmaya devam etmesi için Manisa genelinde teknik servis desteği sağlıyoruz. Ariston Hotpoint buzdolabı, çamaşır makinesi ve bulaşık makinelerinde uzman kadromuzla hızlı ve yerinde tamir çözümleri sunuyoruz. Ariston cihazlarınız için güvenilir teknik destek.",
+      "Ariston marka beyaz eşyalarınızın yüksek performansla çalışmaya devam etmesi için Manisa genelinde teknik servis desteği sağlıyoruz. Ariston Hotpoint buzdolabı, çamaşır makinesi and bulaşık makinelerinde uzman kadromuzla hızlı and yerinde tamir çözümleri sunuyoruz. Ariston cihazlarınız için güvenilir teknik destek.",
   },
   {
     slug: "altus",
     name: "Altus",
     details:
-      "Altus beyaz eşya kullanıcıları için Manisa'da kesintisiz teknik servis hizmeti sağlıyoruz. Altus marka buzdolabı, bulaşık makinesi ve fırınlarınızda meydana gelen arızaları uzman kadromuzla hızlıca gideriyoruz. Altus cihazlarınız için güvenilir servis.",
+      "Altus beyaz eşya kullanıcıları için Manisa'da kesintisiz teknik servis hizmeti sağlıyoruz. Altus marka buzdolabı, bulaşık makinesi and fırınlarınızda meydana gelen arızaları uzman kadromuzla hızlıca gideriyoruz. Altus cihazlarınız için güvenilir servis.",
   },
   {
     slug: "samsung",
     name: "Samsung",
     details:
-      "Samsung dijital inverter teknolojili cihazlarınız için Manisa'da ileri düzey teknik servis veriyoruz. Samsung EcoBubble çamaşır makineleri ve No-Frost buzdolaplarında uzmanlaşmış ekibimizle, teknolojik arızaları yerinde çözüyoruz. Samsung kalitesinde profesyonel tamir.",
+      "Samsung dijital inverter teknolojili cihazlarınız için Manisa'da ileri düzey teknik servis veriyoruz. Samsung EcoBubble çamaşır makineleri and No-Frost buzdolaplarında uzmanlaşmış ekibimizle, teknolojik arızaları yerinde çözüyoruz. Samsung kalitesinde profesyonel tamir.",
   },
   {
     slug: "indesit",
     name: "Indesit",
     details:
-      "Indesit marka beyaz eşyalarınızın tamiri ve bakımı için Manisa'da deneyimli bir ekibe sahibiz. Indesit çamaşır makinesi ve buzdolabı modellerinde yerinde servis imkanı sunarak, cihazlarınızı ilk günkü verimine kavuşturuyoruz.",
+      "Indesit marka beyaz eşyalarınızın tamiri and bakımı için Manisa'da deneyimli bir ekibe sahibiz. Indesit çamaşır makinesi and buzdolabı modellerinde yerinde servis imkanı sunarak, cihazlarınızı ilk günkü verimine kavuşturuyoruz.",
   },
 ];
 

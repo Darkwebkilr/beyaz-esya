@@ -5,6 +5,7 @@ import { Phone, MessageCircle, MapPin, Star, Clock, ShieldCheck, Wrench } from "
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -45,6 +46,30 @@ export default async function DistrictPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "LocalBusiness",
+        "name": `Manisa Beyaz Eşya Servisi - ${district.name}`,
+        "image": "https://manisabeyazesyaservisi.com/beyaz-esya-tamiri.jpg",
+        "telephone": contact.phoneCall,
+        "url": `https://manisabeyazesyaservisi.com/bolgeler/${district.slug}`,
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Manisa",
+          "addressRegion": district.name,
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.614,
+          "longitude": 27.429
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "24"
+        }
+      },
+      {
         "@type": "Service",
         "serviceType": "Beyaz Eşya Tamiri",
         "provider": {
@@ -79,35 +104,67 @@ export default async function DistrictPage({ params }: Props) {
 
       <Navbar />
 
-      <main className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
-        <header className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 mb-8">
-            <div className="size-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-xs font-black tracking-[0.2em] uppercase text-slate-500 italic">{district.name} Yerel Servis Ağı</span>
-          </div>
-          <h1 className="text-4xl md:text-7xl font-black text-foreground italic uppercase tracking-tighter leading-[0.9] mb-8 break-words">
-            {district.name} <br />
-            <span className="text-primary text-glow text-2xl md:text-5xl tracking-tight uppercase block mt-2">Beyaz Eşya Tamiri</span>
-            <span className="text-slate-400 text-xl md:text-3xl tracking-widest block mt-4 font-black">Aynı Gün Servis | {contact.phone}</span>
-          </h1>
-          <p className="text-slate-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-medium italic">
-            {district.details}
-          </p>
-        </header>
-
-        <section className="mb-20 bg-white/50 border border-slate-100 rounded-[40px] p-8 md:p-12 backdrop-blur-sm">
-          <div className="prose prose-slate max-w-none">
-            <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">{district.name}&apos;de Profesyonel Teknik Destek</h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              {district.name} sakinleri için sunduğumuz beyaz eşya teknik servis hizmetimiz, bölgedeki en hızlı ve güvenilir çözüm ortağınız olmayı hedefler. Manisa&apos;nın bu köklü mahallesinde, Arçelik, Beko, Bosch, Samsung ve daha pek çok markanın uzman tamir işlemlerini gerçekleştiriyoruz. 
+      <main className="pt-32 pb-24 px-6 max-w-6xl mx-auto">
+        {/* Hero Section - Split Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <header className="text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 mb-8 shadow-sm">
+              <div className="size-2 bg-accent rounded-full animate-pulse" />
+              <span className="text-xs font-black tracking-[0.2em] uppercase text-slate-500 italic">{district.name} Yerel Servis Ağı</span>
+            </div>
+            <h1 className="text-4xl md:text-7xl font-black text-foreground italic uppercase tracking-tighter leading-[0.9] mb-8 break-words">
+              {district.name} <br />
+              <span className="text-primary text-glow text-2xl md:text-5xl tracking-tight uppercase block mt-2">Beyaz Eşya Tamiri</span>
+              <span className="text-black text-lg md:text-2xl tracking-widest block mt-6 font-black uppercase italic">Aynı Gün Servis | {contact.phone}</span>
+            </h1>
+            <p className="text-black text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium italic mb-10">
+              {district.details}
             </p>
-            <p className="text-slate-600 leading-relaxed mb-4">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <a href={`tel:${contact.phoneCall}`} className="bg-foreground text-white px-8 py-4 rounded-2xl font-black italic uppercase text-sm hover:bg-primary transition-all shadow-lg shadow-primary/10">Hemen Ara</a>
+              <a href={`https://wa.me/${contact.whatsapp}`} className="bg-white border border-slate-100 text-primary px-8 py-4 rounded-2xl font-black italic uppercase text-sm hover:border-primary/20 transition-all shadow-sm">WhatsApp Mesaj</a>
+            </div>
+          </header>
+
+          <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden border border-slate-100 group shadow-2xl order-1 lg:order-2">
+            <Image 
+              src="/beyaz-esya-servisi-manisa.webp" 
+              alt={`${district.name} Beyaz Eşya Servisi`} 
+              fill 
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-40" />
+          </div>
+        </div>
+
+        <section className="mb-20 bg-white/50 border border-slate-50 rounded-[40px] p-8 md:p-12 backdrop-blur-sm">
+          <div className="prose prose-slate max-w-none">
+            <div className="grid lg:grid-cols-3 gap-12 items-center mb-12">
+              <div className="lg:col-span-2">
+                <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">{district.name}&apos;de Profesyonel Teknik Destek</h2>
+                <p className="text-black leading-relaxed mb-4">
+                  {district.name} sakinleri için sunduğumuz beyaz eşya teknik servis hizmetimiz, bölgedeki en hızlı ve güvenilir çözüm ortağınız olmayı hedefler. Manisa&apos;nın bu köklü mahallesinde, Arçelik, Beko, Bosch, Samsung ve daha pek çok markanın uzman tamir işlemlerini gerçekleştiriyoruz. 
+                </p>
+              </div>
+              <div className="relative aspect-video rounded-3xl overflow-hidden border border-slate-100 shadow-lg">
+                <Image 
+                  src="/beyaz-esya-tamiri.jpg" 
+                  alt={`${district.name} Teknik Destek`} 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            
+            <p className="text-black leading-relaxed mb-4">
               <strong>{district.name} buzdolabı tamiri:</strong> Buzdolabınızın soğutma performansındaki düşüşler, motor (kompresör) arızaları veya gaz kaçağı gibi sorunlarda dakikalar içinde müdahale ediyoruz. Gıdalarınız bozulmadan, yerinde onarım imkanıyla cihazınızı hayata döndürüyoruz.
             </p>
-            <p className="text-slate-600 leading-relaxed mb-4">
+            <p className="text-black leading-relaxed mb-4">
               <strong>{district.name} çamaşır makinesi servisi:</strong> Makineniz su boşaltmıyor mu? Ya da sıkma programında aşırı ses mi çıkarıyor? {district.name} sokaklarında gezici ekiplerimizle amortisör değişimi, pompa temizliği ve kart tamiri işlemlerini garantili yedek parça kullanarak yapıyoruz.
             </p>
-            <p className="text-slate-600 leading-relaxed">
+            <p className="text-black leading-relaxed">
               Teknik servisimiz, sadece bozulan cihazları tamir etmekle kalmaz, aynı zamanda cihazlarınızın ömrünü uzatacak periyodik bakımları da üstlenir. 40 yıllık Manisa Teknik güvencesiyle, şeffaf fiyatlandırma ve dürüst esnaflık ilkelerimizden ödün vermeden kapınızdayız.
             </p>
           </div>
@@ -115,13 +172,13 @@ export default async function DistrictPage({ params }: Props) {
 
         <section className="mb-20">
           <h2 className="text-2xl font-black text-foreground italic uppercase mb-8 tracking-tight text-center">{district.name}&apos;de Marka Servislerimiz</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {brands.map((brand, i) => (
-              <Link key={i} href={`/bolgeler/${district.slug}/${brand.slug}`} className="p-4 bg-white border border-slate-100 rounded-2xl hover:border-primary/30 transition-all flex flex-col items-center gap-3 group shadow-sm">
-                <div className="size-10 bg-slate-50 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
-                  <Wrench className="size-5 text-primary group-hover:text-white" />
+              <Link key={i} href={`/bolgeler/${district.slug}/${brand.slug}`} className="p-8 bg-white border border-slate-100 rounded-[32px] hover:border-primary/30 transition-all flex flex-col items-center gap-4 group shadow-sm">
+                <div className="size-14 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                  <Wrench className="size-6 text-primary group-hover:text-white" />
                 </div>
-                <span className="text-foreground font-black uppercase italic text-[10px] tracking-widest text-center group-hover:text-primary transition-colors">{brand.name} Servisi</span>
+                <span className="text-black font-black uppercase italic text-sm tracking-[0.15em] text-center group-hover:text-primary transition-colors">{brand.name} <br /> Servisi</span>
               </Link>
             ))}
           </div>
@@ -137,8 +194,8 @@ export default async function DistrictPage({ params }: Props) {
                <div className="size-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                  <item.icon className="text-primary size-6" />
                </div>
-               <h3 className="text-foreground font-black text-xl mb-3 uppercase italic">{item.title}</h3>
-               <p className="text-slate-600 text-sm leading-relaxed font-medium">{item.desc}</p>
+               <h3 className="text-black font-black text-xl mb-3 uppercase italic">{item.title}</h3>
+               <p className="text-black/70 text-sm leading-relaxed font-medium">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -156,8 +213,8 @@ export default async function DistrictPage({ params }: Props) {
                   <div className="flex gap-1 mb-3 text-accent">
                     {[...Array(rev.rating)].map((_, j) => <Star key={j} className="size-3 fill-accent" />)}
                   </div>
-                  <p className="text-slate-600 text-sm mb-4">“{rev.comment}”</p>
-                  <div className="text-xs font-black uppercase tracking-widest text-foreground">{rev.name}</div>
+                  <p className="text-black/80 text-sm mb-4">“{rev.comment}”</p>
+                  <div className="text-xs font-black uppercase tracking-widest text-black">{rev.name}</div>
                 </div>
               ))}
            </div>
@@ -170,12 +227,12 @@ export default async function DistrictPage({ params }: Props) {
            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
              <div>
                <h2 className="text-3xl md:text-4xl font-black text-foreground italic uppercase mb-6 tracking-tight">Hizmet Alanımız</h2>
-               <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
+               <p className="text-black text-lg mb-8 leading-relaxed font-medium italic">
                  {district.name} ilçe merkezi, tüm mahalleleri ve çevre köyleri gezici servis rotamız dahilindedir. Hangi konumda olursanız olun, bir telefonla kapınızdayız.
                </p>
                <div className="grid grid-cols-2 gap-4">
                  {["Merkez Mahalleler", "Çevre Köyler", "Sanayi Bölgeleri", "Toplu Konutlar"].map((place, i) => (
-                   <div key={i} className="flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest text-xs">
+                   <div key={i} className="flex items-center gap-2 text-black font-black uppercase tracking-widest text-[10px]">
                      <div className="size-1.5 bg-primary rounded-full" />
                      {place}
                    </div>

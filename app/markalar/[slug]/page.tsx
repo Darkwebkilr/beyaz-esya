@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Wrench, ShieldCheck, Clock, Star } from "lucide-r
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -42,6 +43,24 @@ export default async function BrandPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "LocalBusiness",
+        "name": `Manisa ${brand.name} Teknik Servisi`,
+        "image": "https://manisabeyazesyaservisi.com/beyaz-esya-tamiri.jpg",
+        "telephone": contact.phoneCall,
+        "url": `https://manisabeyazesyaservisi.com/markalar/${brand.slug}`,
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Manisa",
+          "addressCountry": "TR"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "38"
+        }
+      },
+      {
         "@type": "Service",
         "serviceType": `${brand.name} Beyaz Eşya Tamiri`,
         "provider": {
@@ -68,38 +87,70 @@ export default async function BrandPage({ params }: Props) {
 
       <Navbar />
 
-      <main className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
-        <header className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 mb-8 shadow-sm">
-            <div className="size-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs font-black tracking-[0.2em] uppercase text-slate-500 italic">Teknik Servis Uzmanlığı</span>
+      <main className="pt-32 pb-24 px-6 max-w-6xl mx-auto">
+        {/* Hero Section - Split Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <header className="text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 mb-8 shadow-sm">
+              <div className="size-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-xs font-black tracking-[0.2em] uppercase text-black italic">Teknik Servis Uzmanlığı</span>
+            </div>
+            <h1 className="text-4xl md:text-7xl font-black text-foreground italic uppercase tracking-tighter leading-[0.9] mb-8 break-words">
+              Manisa <br />
+              <span className="text-primary text-glow text-2xl md:text-6xl tracking-tight uppercase block mt-2">{brand.name} Servisi</span>
+              <span className="text-black text-lg md:text-2xl tracking-widest block mt-6 font-black uppercase italic">Profesyonel Onarım | {contact.phone}</span>
+            </h1>
+            <p className="text-black text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium italic mb-10">
+              {brand.details}
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <a href={`tel:${contact.phoneCall}`} className="bg-foreground text-white px-8 py-4 rounded-2xl font-black italic uppercase text-sm hover:bg-primary transition-all shadow-lg shadow-primary/10">Hemen Ara</a>
+              <a href={`https://wa.me/${contact.whatsapp}`} className="bg-white border border-slate-100 text-[#25D366] px-8 py-4 rounded-2xl font-black italic uppercase text-sm hover:border-[#25D366]/20 transition-all shadow-sm">WhatsApp Destek</a>
+            </div>
+          </header>
+
+          <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden border border-slate-100 group shadow-2xl order-1 lg:order-2">
+            <Image 
+              src="/beyaz-esya-servisi-manisa.webp" 
+              alt={`${brand.name} Teknik Servis Manisa`} 
+              fill 
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-40" />
           </div>
-          <h1 className="text-4xl md:text-7xl font-black text-foreground italic uppercase tracking-tighter leading-[0.9] mb-8 break-words">
-            Manisa <br />
-            <span className="text-primary text-glow text-2xl md:text-6xl tracking-tight uppercase block mt-2">{brand.name} Servisi</span>
-            <span className="text-slate-400 text-xl md:text-3xl tracking-widest block mt-4 font-black">Profesyonel Onarım | {contact.phone}</span>
-          </h1>
-          <p className="text-slate-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-medium italic">
-            {brand.details}
-          </p>
-        </header>
+        </div>
 
         <section className="mb-20 bg-white/50 border border-slate-100 rounded-[40px] p-8 md:p-12 backdrop-blur-sm">
            <div className="prose prose-slate max-w-none">
-              <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">{brand.name} Marka Cihazlarda Uzman Çözümler</h2>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                {brand.name} markasının teknolojik üstünlüğüne ve karmaşık yapısına hakim olan ekibimizle, Manisa genelinde en kapsamlı teknik servis desteğini sunuyoruz. Buzdolabından bulaşık makinesine, çamaşır makinesinden fırına kadar tüm {brand.name} modellerinde orijinal yedek parça garantisi veriyoruz.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div className="grid lg:grid-cols-3 gap-12 items-center">
+                <div className="lg:col-span-2">
+                  <h2 className="text-2xl font-black text-foreground italic uppercase mb-6 tracking-tight">{brand.name} Marka Cihazlarda Uzman Çözümler</h2>
+                  <p className="text-black leading-relaxed mb-4 font-medium italic">
+                    {brand.name} markasının teknolojik üstünlüğüne ve karmaşık yapısına hakim olan ekibimizle, Manisa genelinde en kapsamlı teknik servis desteğini sunuyoruz. Buzdolabından bulaşık makinesine, çamaşır makinesinden fırına kadar tüm {brand.name} modellerinde orijinal yedek parça garantisi veriyoruz.
+                  </p>
+                </div>
+                <div className="relative aspect-video lg:aspect-square rounded-3xl overflow-hidden border border-slate-100 shadow-lg">
+                  <Image 
+                    src="/beyaz-esya-tamiri.jpg" 
+                    alt={`${brand.name} Onarım`} 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                  <div className="p-6 bg-white rounded-3xl border border-slate-50 shadow-sm">
                     <h3 className="text-lg font-black text-foreground uppercase italic mb-3">Teknolojik Onarım</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
+                    <p className="text-black/70 text-sm leading-relaxed font-bold">
                        {brand.name} cihazların elektronik kart tamiri, inverter motor değişimleri ve sensör kalibrasyonları gibi hassas işlemleri özel ekipmanlarımızla yerinde gerçekleştiriyoruz.
                     </p>
                  </div>
                  <div className="p-6 bg-white rounded-3xl border border-slate-50 shadow-sm">
                     <h3 className="text-lg font-black text-foreground uppercase italic mb-3">Orijinal Yedek Parça</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
+                    <p className="text-black/70 text-sm leading-relaxed font-bold">
                        Cihazınızın ömrünü korumak için sadece {brand.name} standartlarına uygun, fabrikasyon onaylı parçalar kullanıyor ve takılan her parçaya 1 yıl resmi servis garantisi sağlıyoruz.
                     </p>
                  </div>
