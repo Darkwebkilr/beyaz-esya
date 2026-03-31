@@ -139,8 +139,8 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-6">
                         {brands.map((brand, idx) => (
-                            <Link key={idx} href={`/markalar/${brand.slug}`} className="aspect-square bg-white border-2 border-slate-200 rounded-[32px] flex items-center justify-center group hover:border-primary transition-all duration-300 shadow-xl shadow-black/5 hover:-translate-y-2">
-                                <span className="text-xl font-black text-black uppercase italic tracking-widest group-hover:text-primary transition-colors text-center px-2">
+                            <Link key={idx} href={`/markalar/${brand.slug}`} className="aspect-square bg-primary border-2 border-white rounded-[32px] flex items-center justify-center group hover:bg-white hover:border-primary transition-all duration-300 shadow-xl shadow-black/5 hover:-translate-y-2">
+                                <span className="text-xl font-black text-white uppercase italic tracking-widest group-hover:text-primary transition-colors text-center px-2">
                                     {brand.name}
                                 </span>
                             </Link>
