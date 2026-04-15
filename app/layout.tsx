@@ -25,6 +25,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,7 +36,7 @@ export default function RootLayout({
       lang="tr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground antialiased">
+      <body className="min-h-full  flex flex-col bg-background text-foreground antialiased">
         {children}
       </body>
     </html>
