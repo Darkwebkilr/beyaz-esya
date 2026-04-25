@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "jsx": "preserve",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
@@ -12,22 +16,28 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+        "paths": {
+      "@/*": ["./*"]
+    },
     "incremental": true,
-    
     // 🔥 BUNLAR ÇOK ÖNEMLİ:
     "isolatedModules": true,
     "disableSourceOfProjectReferenceRedirect": true,
     "disableSolutionSearching": true,
-    "disableReferencedProjectLoad": true
+    "disableReferencedProjectLoad": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+, "index-yap.mjs"  ],
   "exclude": [
     "node_modules",
     ".next",
@@ -44,7 +54,6 @@
     "**/tests/**",
     "**/__tests__/**"
   ],
-  
   // TypeScript'in belleği patlamasını önle
   "ts-node": {
     "transpileOnly": true,
